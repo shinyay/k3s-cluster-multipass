@@ -89,6 +89,12 @@ Next, the server key must be changed to refer to the remote IP address of node1 
 sed -i '' "s/127.0.0.1/$IP/" k3s.yaml
 ```
 
+Finally, configure the local `kubectl` to use the `kubeconfig` file (k3s.yaml) that you obtained. The easy way is to set the `KUBECONFIG` environment variable to point to the configuration file.
+
+```shell
+set -x KUBECONFIG $PWD/k3s.yaml
+```
+
 ## Demo
 
 ## Features
