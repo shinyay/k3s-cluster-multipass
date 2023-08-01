@@ -70,6 +70,13 @@ Take a look at the all the nodes of the cluster.
 multipass exec node1 -- sudo kubectl get nodes
 ```
 
+```shell
+NAME    STATUS   ROLES                  AGE     VERSION
+node1   Ready    control-plane,master   30m     v1.27.4+k3s1
+node2   Ready    <none>                 5m13s   v1.27.4+k3s1
+node3   Ready    <none>                 3m22s   v1.27.4+k3s1
+```
+
 ## Demo
 
 ## Features
