@@ -77,6 +77,13 @@ node2   Ready    <none>                 5m13s   v1.27.4+k3s1
 node3   Ready    <none>                 3m22s   v1.27.4+k3s1
 ```
 
+We need to get the `kubeconfig` file on `node1` to access the cluster's API Server from the local PC.
+
+```shell
+multipass exec node1 sudo cat /etc/rancher/k3s/k3s.yaml > k3s.yaml
+```
+
+
 ## Demo
 
 ## Features
