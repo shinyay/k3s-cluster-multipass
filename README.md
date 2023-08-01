@@ -29,6 +29,13 @@ node3                   Running           192.168.64.11    Ubuntu 22.04 LTS
 
 ### Initialize K3s on node1
 
+By using the exec subcommand of Multipass, I install [K3s](https://k3s.io/)
+
+```shell
+multipass exec node1 -- \
+  bash -c "curl -sfL https://get.k3s.io | sh -"
+```
+
 ## Demo
 
 ## Features
