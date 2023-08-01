@@ -27,6 +27,8 @@ node2                   Running           192.168.64.10    Ubuntu 22.04 LTS
 node3                   Running           192.168.64.11    Ubuntu 22.04 LTS
 ```
 
+### Initialize K3s on node1
+
 ## Demo
 
 ## Features
