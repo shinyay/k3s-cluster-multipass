@@ -50,6 +50,18 @@ set TOKEN $(multipass exec node1 sudo cat /var/lib/rancher/k3s/server/node-token
 set IP $(multipass info node1 | grep IPv4 | awk '{print $2}')
 ```
 
+### Join node2 and node3 to the Cluster
+
+```shell
+multipass exec node2 -- \
+bash -c "curl -sfL https://get.k3s.io | K3S_URL=\"https://$IP:6443\" K3S_TOKEN=\"$TOKEN\" sh -"
+```
+
+```shell
+multipass exec node3 -- \
+bash -c "curl -sfL https://get.k3s.io | K3S_URL=\"https://$IP:6443\" K3S_TOKEN=\"$TOKEN\" sh -"
+```
+
 ## Demo
 
 ## Features
