@@ -62,6 +62,14 @@ multipass exec node3 -- \
 bash -c "curl -sfL https://get.k3s.io | K3S_URL=\"https://$IP:6443\" K3S_TOKEN=\"$TOKEN\" sh -"
 ```
 
+### Get the Cluster Configuration
+
+Take a look at the all the nodes of the cluster.
+
+```shell
+multipass exec node1 -- sudo kubectl get nodes
+```
+
 ## Demo
 
 ## Features
