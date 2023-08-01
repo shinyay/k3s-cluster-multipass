@@ -41,13 +41,13 @@ After installation complete, I'll gather the elements to add additional Kubernet
 - The token to join the cluster
 
 ```shell
-echo $(multipass exec node1 sudo cat /var/lib/rancher/k3s/server/node-token)
+set TOKEN $(multipass exec node1 sudo cat /var/lib/rancher/k3s/server/node-token)
 ```
 
 - The IP of the API server running on node1
 
 ```shell
-echo $(multipass info node1 | grep IPv4 | awk '{print $2}')
+set IP $(multipass info node1 | grep IPv4 | awk '{print $2}')
 ```
 
 ## Demo
