@@ -106,6 +106,37 @@ set -x KUBECONFIG $PWD/k3s.yaml
 
 ## Usage
 
+### Deploy Kubernets Dashboard
+
+Apply the declaration of admin user.
+
+```shell
+kubectl apply -f sa-admin-user.yml
+```
+
+The following is the `sa-admin-user.yml`
+
+```yaml
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: admin-user
+  namespace: kubernetes-dashboard
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: admin-user
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: cluster-admin
+subjects:
+- kind: ServiceAccount
+  name: admin-user
+  namespace: kubernetes-dashboard
+```
+
 ## Installation
 
 ## References
