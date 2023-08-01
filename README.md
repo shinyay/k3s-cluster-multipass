@@ -8,6 +8,25 @@ I’ll set up a K3s Kubernetes cluster on virtual machines created with Multipas
 
 ## Description
 
+### Creation of the VMs
+
+```shell
+multipass launch --name node1
+multipass launch --name node2
+multipass launch --name node3
+```
+
+```shell
+multipass list
+```
+
+```shell
+Name                    State             IPv4             Image
+node1                   Running           192.168.64.9     Ubuntu 22.04 LTS
+node2                   Running           192.168.64.10    Ubuntu 22.04 LTS
+node3                   Running           192.168.64.11    Ubuntu 22.04 LTS
+```
+
 ## Demo
 
 ## Features
