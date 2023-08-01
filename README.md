@@ -83,6 +83,11 @@ We need to get the `kubeconfig` file on `node1` to access the cluster's API Serv
 multipass exec node1 sudo cat /etc/rancher/k3s/k3s.yaml > k3s.yaml
 ```
 
+Next, the server key must be changed to refer to the remote IP address of node1 instead of the local host.
+
+```shell
+sed -i '' "s/127.0.0.1/$IP/" k3s.yaml
+```
 
 ## Demo
 
