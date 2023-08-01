@@ -36,6 +36,14 @@ multipass exec node1 -- \
   bash -c "curl -sfL https://get.k3s.io | sh -"
 ```
 
+After installation complete, I'll gather the elements to add additional Kubernetes distribution.
+
+- The token to join the cluster
+
+```shell
+echo $(multipass exec node1 sudo cat /var/lib/rancher/k3s/server/node-token)
+```
+
 ## Demo
 
 ## Features
